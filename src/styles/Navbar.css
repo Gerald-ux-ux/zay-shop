@@ -24,6 +24,7 @@ nav.navbar {
 .btn-light {
   background-color: #fffcff !important;
   color: #1e1f26 !important;
+  width: 100px;
 
 
 }

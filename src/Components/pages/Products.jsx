@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Skeleton from "react-loading-skeleton";
+
 // import { useActionData } from "react-router-dom";
 import { Link } from "react-router-dom";
 
@@ -9,6 +10,7 @@ const Products = () => {
   const [filter, setFilter] = useState(data);
   const [loading, setLoading] = useState(false);
   let componentMounted = true;
+  
 
   useEffect(() => {
     const getProducts = async () => {

@@ -45,42 +45,53 @@ h6 {
   font-weight: lighter;
 }
 
-.btn-outline-dark{
+.btn-outline-dark {
   background-color: #f98bae;
   color: #1e1f26 !important;
-    border: 1px solid #f98bae !important;
+  border: 1px solid #f98bae !important;
 }
 
-.btn-outline-dark:hover{
-   background-color: #f98bae !important;
+.btn-outline-dark:hover {
+  background-color: #f98bae !important;
 }
 
-
-.hr-1{
+.hr-1 {
   color: #f98bae;
   font-weight: bolder !important;
 }
 
-.card{
-    border: 1px solid #f98bae !important;
+.card {
+  border: 1px solid #f98bae !important;
 }
 
-.link{
+.link {
   background-color: #f98bae !important;
   color: #1e1f26 !important;
 }
 
+.card {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out; 
+  transform: translateZ(0); 
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Move the card up 5 pixels when hovered */
+}
 
 /* ======= Product style ====== */
 
-  .lead1{
+.lead1 {
   color: #1e1f26 !important;
 }
 
-  .display-5{
+.display-5 {
   color: #1e1f26 !important;
 }
 
 .fw-bold {
   color: #1e1f26 !important;
 }
+
+
+/* ======= Cart style ====== */

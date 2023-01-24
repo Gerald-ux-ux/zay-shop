@@ -7,6 +7,7 @@ import NotFound from "./Components/pages/NotFound";
 import Products from "./Components/pages/Products";
 import Navbar from "./Components/Navbar";
 import Product from "./Components/pages/Product";
+import Cart from "./Components/Cart";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/product/:id" element={<Product />} />
           <Route path="*" element={<NotFound />} />
+          <Route  path="/cart" element={Cart } />
         </Routes>
       </div>
     </>

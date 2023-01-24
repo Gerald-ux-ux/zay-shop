@@ -1,8 +1,10 @@
 import React from "react";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 import "../styles/Navbar.css";
 
 const Navbar = () => {
+  const state = useSelector ((state) => state.handleCart)
   return (
     <div>
       <nav className="navbar navbar-expand-lg   py-3 shadow-sm ">
@@ -59,7 +61,7 @@ const Navbar = () => {
 
               <div classNameName="buttons">
                 <Link to="/cart" class="btn btn-light ms-2">
-                  <i class="fa fa-shopping-cart ">(0)</i>
+                  <i class="fa fa-shopping-cart ">Cart ({state.length})</i>
                 </Link>
               </div>
             </form>
