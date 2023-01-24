@@ -1,6 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useActionData } from "react-router-dom";
+import Skeleton from "react-loading-skeleton";
+// import { useActionData } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   const [data, setData] = useState([]);
@@ -27,17 +29,63 @@ const Products = () => {
   }, []);
 
   const Loading = () => {
-    return <>Loading....</>;
+    return (
+      <>
+        <div className="col-md-3">
+          <Skeleton height={350} />
+        </div>
+        <div className="col-md-3">
+          <Skeleton height={350} />
+        </div>
+        <div className="col-md-3">
+          <Skeleton height={350} />
+        </div>
+      </>
+    );
   };
+
+
+  const filterProduct = (cat) => {
+    const updatedList = data.filter((x) => x.category === cat);
+    setFilter(updatedList);
+  }
+
+
+
   const ShowProducts = () => {
     return (
       <>
         <div className="buttons d-flex justify-content-center mb-5 pb-5">
-          <div className="btn btn-outline-dark ms-2">All Products</div>
-          <div className="btn btn-outline-dark ms-2">Men's Clothing</div>
-          <div className="btn btn-outline-dark ms-2">Women's Clothing</div>
-          <div className="btn btn-outline-dark ms-2">Jewelery </div>
-          <div className="btn btn-outline-dark ms-2">Electronics</div>
+          <div
+            className="btn btn-outline-dark ms-2"
+            onClick={() => setFilter(data)}
+          >
+            All
+          </div>
+          <div
+            className="btn btn-outline-dark ms-2"
+            onClick={() => filterProduct("men's clothing")}
+          >
+            Men's
+          </div>
+          <div
+            className="btn btn-outline-dark ms-2"
+            onClick={() => filterProduct("women's clothing")}
+          >
+            Women's
+          </div>
+          <div
+            className="btn btn-outline-dark ms-2"
+            onClick={() => filterProduct("jewelery")}
+          >
+            Jewelery
+          </div>
+          <div
+            className="btn btn-outline-dark ms-2"
+            onClick={() => filterProduct("electronics")}
+          >
+            Electronics
+          </div>
         </div>
         {filter.slice(0, 20).map((product) => {
           return (
@@ -52,12 +100,16 @@ const Products = () => {
                   />
                   <div class="card-body">
                     <h5 class="card-titlea mb-0">
-                      {product.title.substring(0, 12)}
+                      {product.title.substring(0, 12)}...
                     </h5>
-                    <p class="card-texta">${product.price}</p>
-                    <a href="#" class="btn btn-outline-dark ms-2">
-                      Buy Now
-                    </a>
+                    <p class="card-texta lead fw-bold">${product.price}</p>
+    
+                      <Link
+                        className="btn btn-outline-dark ms-1"
+                        to={`/product/${product.id}`}
+                      >
+                        Buy Now
+                      </Link>
                   </div>
                 </div>
               </div>
@@ -74,7 +126,7 @@ const Products = () => {
         <div className="row">
           <div className="col-12 mb-5">
             <h1 className="display-6 fw-bolder text-center">Latest Products</h1>
-            <hr />
+            <hr className="hr-1" />
           </div>
           <div className="row justify-conent-center">
             {loading ? <Loading /> : <ShowProducts />}

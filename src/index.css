@@ -45,3 +45,42 @@ h6 {
   font-weight: lighter;
 }
 
+.btn-outline-dark{
+  background-color: #f98bae;
+  color: #1e1f26 !important;
+    border: 1px solid #f98bae !important;
+}
+
+.btn-outline-dark:hover{
+   background-color: #f98bae !important;
+}
+
+
+.hr-1{
+  color: #f98bae;
+  font-weight: bolder !important;
+}
+
+.card{
+    border: 1px solid #f98bae !important;
+}
+
+.link{
+  background-color: #f98bae !important;
+  color: #1e1f26 !important;
+}
+
+
+/* ======= Product style ====== */
+
+  .lead1{
+  color: #1e1f26 !important;
+}
+
+  .display-5{
+  color: #1e1f26 !important;
+}
+
+.fw-bold {
+  color: #1e1f26 !important;
+}
