@@ -53,7 +53,9 @@ const Contact = () => {
         </form>
 
         <div className="d-flex text-center mb-4">
-          <button className="btn btn-outline-dark mx-auto ">Submit form</button>
+          <button type="submit" className="btn btn-outline-dark mx-auto ">
+            Submit form
+          </button>
         </div>
       </div>
       <br />
@@ -63,12 +65,10 @@ const Contact = () => {
       <br />
       <br />
       <br />
-
       <h3 className="snt1 ">
         Thank you for your feedback !
         <i class="fa fa-smile-o" aria-hidden="true"></i>
       </h3>
-
       <br />
       <br />
       <br />

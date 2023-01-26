@@ -30,24 +30,25 @@ const Product = () => {
 
   const ShowProduct = () => {
     return (
-      <div className="py-5">
-        <div className="col md-3">
+      <>
+        <div className="col md-3 py-5">
           <img
             src={product.image}
             alt={product.title}
             height="420px"
             width="350px"
           />
+          <h3 className="dislpay-6 fw-bold my-4 ">$ {product.price}</h3>
         </div>
-        <div className="col-md-4">
+        <div className="col-md-4 py-5">
           <h4 className="text-uppercase text-black-50">{product.category}</h4>
           <h1 className="display-5">{product.title}</h1>
           <p className="lead1 fw-bolder ">
             Rating {product.rating && product.rating.rate}
             <i className=" fa fa-star"></i>
           </p>
-          <h3 className="dislpay-6 fw-bold my-4 ">$ {product.price}</h3>
           <p className="lead1 fw-bolder ">{product.description}</p>
+
           <button
             className="btn btn-outline-dark ms-1"
             onClick={() => addProduct(product)}
@@ -58,7 +59,7 @@ const Product = () => {
             Go to cart
           </Link>
         </div>
-      </div>
+      </>
     );
   };
 
