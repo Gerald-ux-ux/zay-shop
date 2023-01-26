@@ -61,22 +61,17 @@ const AboutUs = () => {
                 <h6 className="section__subtitle text-center">
                   Need Any Help? Contact us
                 </h6>
-                <h4 className="text-center">+245 792278510</h4>
+                <h4 className="text-center">
+                  <i class="fa fa-phone" aria-hidden="true"></i>+245 792278510
+                </h4>
               </div>
-              <section>
-                <Container>
-                  <Row>
-                    <Col lg="12" className="mb-5 text-center">
-                      <h2 className="section__title">Our Members</h2>
-                    </Col>
-
-                  </Row>
-                </Container>
-              </section>
             </div>
           </Col>
         </Row>
       </Container>
+
+      <br />
+      <br />
 
       <br />
       <div>
