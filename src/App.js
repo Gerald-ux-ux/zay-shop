@@ -9,6 +9,7 @@ import Navbar from "./Components/Navbar";
 import Product from "./Components/pages/Product";
 import Cart from "./Components/Cart";
 import Checkout from "./Components/Checkout";
+import Footer from "./Components/pages/Footer";
 
 
 function App() {
@@ -24,8 +25,9 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/product/:id" element={<Product />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/footer" element={<Footer />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/checkout/:id" element={<Checkout /> } />
+          <Route path="/checkout/:id" element={<Checkout />} />
         </Routes>
       </div>
     </>

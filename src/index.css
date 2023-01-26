@@ -104,3 +104,122 @@ h6 {
   color: #1e1f26;
 }
 
+/* ======= Footer style ====== */
+
+.footer {
+  background: #1e1f26;
+  padding-top: 50px;
+  padding-bottom: 15px;
+}
+
+.footer__logo i {
+  color: #d0e1f9;
+  font-weight: 350;
+}
+
+.footer__logo span {
+  color: #d0e1f9;
+  font-weight: 500;
+}
+
+.footer__logo-content {
+  color: #d0e1f9;
+  margin-top: 15px;
+  line-height: 30px;
+}
+
+.quick__link {
+  border: none !important;
+  background: transparent !important;
+}
+
+.quick__link a {
+  color: #d0e1f9;
+  text-decoration: none;
+  font-weight: 300;
+  transition: 0.3s;
+}
+
+.quick__link a:hover {
+  color: palevioletred;
+}
+
+.footer__link-title {
+  color: #d0e1f9;
+}
+
+.office__info {
+  color: #d0e1f9;
+  font-weight: 300;
+}
+
+.newsletter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border: 1px solid white;
+  border-radius: 50px;
+  background-color: black;
+}
+
+.newsletter input {
+  background: transparent;
+  color: #fff;
+  border: none;
+  outline: none;
+}
+
+.newsletter span i {
+  color: #fff;
+}
+
+.footer__bottom {
+  border-top: 1px solid #d0e1f9;
+  margin-top: 20px;
+}
+
+.section__description1 {
+  color: #d0e1f9;
+}
+.text-container {
+  margin-top: 20px;
+}
+
+/* latest code update */
+
+/* .bottom1 {
+  position: absolute;
+  right: 180px;
+}
+.bottom {
+  position: absolute;
+  right: 45%;
+}
+.up{
+ position: relative;
+ right: 10px;
+} */
+
+/* latest code update */
+
+@media only screen and (max-width: 768px) {
+  .footer__logo-content {
+    font-size: 0.8rem;
+  }
+
+  .quick__link,
+  .office__info {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+
+  .footer__link-title {
+    font-size: 1rem;
+    margin-top: 15px;
+  }
+
+  .footer__bottom p {
+    font-size: 0.7rem;
+  }
+}

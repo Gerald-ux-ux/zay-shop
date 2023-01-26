@@ -3,6 +3,7 @@ import React from "react";
 
 
 import Img from "../pages/ava-1.jpg";
+import Footer from "./Footer";
 import Products from "./Products";
 
 
@@ -22,6 +23,7 @@ const Home = () => {
         </div>
         <Products />
       </div>
+      <Footer />
     </>
   );
 };
