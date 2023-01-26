@@ -1,17 +1,16 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import Skeleton from "react-loading-skeleton";
+
 
 // import { useActionData } from "react-router-dom";
 import { Link } from "react-router-dom";
-
+import Footer from "./Footer";
 
 const Products = () => {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(data);
   const [loading, setLoading] = useState(false);
   let componentMounted = true;
-  
 
   useEffect(() => {
     const getProducts = async () => {
@@ -32,28 +31,13 @@ const Products = () => {
   }, []);
 
   const Loading = () => {
-    return (
-      <>
-        <div className="col-md-3">
-          <Skeleton height={350} />
-        </div>
-        <div className="col-md-3">
-          <Skeleton height={350} />
-        </div>
-        <div className="col-md-3">
-          <Skeleton height={350} />
-        </div>
-      </>
-    );
+    return <>Loading ....</>;
   };
-
 
   const filterProduct = (cat) => {
     const updatedList = data.filter((x) => x.category === cat);
     setFilter(updatedList);
-  }
-
-
+  };
 
   const ShowProducts = () => {
     return (
@@ -106,13 +90,13 @@ const Products = () => {
                       {product.title.substring(0, 12)}...
                     </h5>
                     <p class="card-texta lead fw-bold">${product.price}</p>
-    
-                      <Link
-                        className="btn btn-outline-dark ms-1"
-                        to={`/product/${product.id}`}
-                      >
-                        Buy Now
-                      </Link>
+
+                    <Link
+                      className="btn btn-outline-dark ms-1"
+                      to={`/product/${product.id}`}
+                    >
+                      Buy Now
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -136,7 +120,7 @@ const Products = () => {
           </div>
         </div>
       </div>
-
+      {!loading && <Footer />}
     </div>
   );
 };

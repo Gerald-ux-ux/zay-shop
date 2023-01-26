@@ -77,10 +77,8 @@ const Cart = () => {
           <p className="lead fw-bold">Total: ${calculateTotal()}</p>
         </div>
         <div className="container">
-          <div className="row">
-            <button
-              className="btn btn-outline-dark mb-2 w-25 mx-auto"
-            >
+          <div className="col-md-4">
+            <button className="btn btn-outline-dark mb-2 w-25 mx-auto">
               Pay
             </button>
           </div>

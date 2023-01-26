@@ -3,6 +3,25 @@ import { Link } from "react-router-dom";
 import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
 
 const Footer = () => {
+
+  const socialIcons = [
+    {
+      path: "#",
+      display: <i class="fa fa-instagram" aria-hidden="true"></i>,
+    },
+    {
+      path: "#",
+      display: <i class="fa fa-facebook" aria-hidden="true"></i>,
+    },
+    {
+      path: "#",
+      display: <i class="fa fa-linkedin" aria-hidden="true"></i>,
+    },
+    {
+      path: "#",
+      display: <i class="fa fa-twitter" aria-hidden="true"></i>,
+    },
+  ];
   const quickLinks = [
     {
       path: "/about",
@@ -66,10 +85,23 @@ const Footer = () => {
             </div>
           </Col>
 
+          <Col lg="2" md="4" sm="6">
+            <div className="mb-2 ">
+              <h5 className="footer__link-title">Social Links</h5>
+              <ListGroup>
+                {socialIcons.map((item, index) => (
+                  <ListGroupItem key={index} className="p-0 mt-2 quick__link">
+                    <Link to={item.path}>{item.display}</Link>
+                  </ListGroupItem>
+                ))}
+              </ListGroup>
+            </div>
+          </Col>
+
           <Col lg="12">
             <div className="footer__bottom">
               <p className="section__description1 d-flex align-items-center justify-content-center gap-1 pt-4">
-                <i class="ri-copyright-line"></i>Copyright {year}, Developed by
+                <i class="ri-copyright-line"></i>Copyright 1990 - {year}, Developed by
                 Gerald Kamau. All rights reserved.
               </p>
             </div>

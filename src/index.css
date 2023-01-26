@@ -182,6 +182,11 @@ h6 {
 }
 
 
+
+
+
+
+
 @media only screen and (max-width: 768px) {
   .footer__logo-content {
     font-size: 0.8rem;
@@ -201,4 +206,28 @@ h6 {
   .footer__bottom p {
     font-size: 0.7rem;
   }
+}
+
+
+
+/* ======= Contact style ====== */
+
+.input-1{
+  color: #f98bae;
+}
+.form-control{
+  color: #f98bae;
+}
+
+.d-flex .text-center .mb-4{
+  color: #1e1f26;
+}
+
+.fa-smile-o{
+  color: #f98bae;
+}
+
+.snt1{
+  color: #f98bae !important;
+  text-align: center;
 }
