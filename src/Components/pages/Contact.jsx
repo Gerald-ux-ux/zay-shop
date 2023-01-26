@@ -1,11 +1,12 @@
 import React from "react";
 import Footer from "./Footer";
+/* eslint-disable no-restricted-globals */
 
 const Contact = () => {
   return (
     <>
       <div>
-        <form className="d-flex justify-content-center mb-2  py-5 ms-2">
+        <form className="d-flex justify-content-center mb-2  py-5 ms-1">
           <div class="form-group col-md-2 p-4">
             <label for="inputEmail4" className="input-1">
               Email
@@ -16,7 +17,7 @@ const Contact = () => {
               id="inputEmail4"
               placeholder="Email"
             />
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-12 ">
               <label for="inputZip" className="input-1">
                 Zip
               </label>
@@ -28,7 +29,7 @@ const Contact = () => {
               />
             </div>
           </div>
-          <div class="form-group col-md-2 p-4">
+          <div class="form-group col-md-2  p-4">
             <label for="inputAddress" className="input-1">
               Address
             </label>
@@ -38,7 +39,7 @@ const Contact = () => {
               id="inputAddress"
               placeholder="1234 Main St"
             />
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-12 ">
               <label for="inputCity" className="input-1">
                 City
               </label>
@@ -53,7 +54,13 @@ const Contact = () => {
         </form>
 
         <div className="d-flex text-center mb-4">
-          <button type="submit" className="btn btn-outline-dark mx-auto ">
+          <button
+            type="submit"
+            className="btn btn-outline-dark mx-auto"
+            onClick={() => {
+              location.reload();
+            }}
+          >
             Submit form
           </button>
         </div>
