@@ -1,30 +1,87 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
+import Footer from "./Footer";
+
 
 const AboutUs = () => {
+    const socialIcons = [
+    {
+      path: "#",
+      display: <i class="fa fa-instagram" aria-hidden="true">  instagram</i>,
+    },
+    {
+      path: "#",
+      display: <i class="fa fa-facebook" aria-hidden="true"> facebook</i>,
+    },
+    {
+      path: "#",
+      display: <i class="fa fa-linkedin" aria-hidden="true"> linkedin</i>,
+    },
+    {
+      path: "#",
+      display: <i class="fa fa-twitter" aria-hidden="true"> twitter</i>,
+    },
+  ];
+  
   return (
     <>
       <Container>
         <Row>
           <Col className="row-sm-6">
             <div className="md-3 mb-4 py-5">
-              <p class="card-texta lead fw-bold">
-                Welcome to our e-commerce website! We are a team of dedicated
-                individuals who strive to provide the best shopping experience
-                for our customers. We offer a wide range of products at
-                competitive prices, and are constantly updating our inventory to
-                bring you the latest trends and must-haves.
+              <p class="card-texta lead fw-bold text-center">
+                Unlock the doors to endless possibilities with our
+                state-of-the-art e-commerce platform. From the latest fashion
+                trends to cutting-edge technology, we have it all. Our carefully
+                curated selection of products is guaranteed to meet all your
+                needs and exceed your expectations.
               </p>
-              <p className="card-texta lead fw-bold">
-                Our goal is to make shopping easy, convenient, and enjoyable for
-                everyone. We pride ourselves on our customer service and are
-                always happy to help with any questions or concerns.
+
+              <br />
+
+              <p className="card-texta lead fw-bold text-center">
+                Experience the future of shopping with our user-friendly
+                interface and lightning fast delivery. Our team of experts works
+                tirelessly to bring you the best deals and promotions, so you
+                can shop with confidence. With 24/7 customer support, you can
+                rest assured that we've got your back.
               </p>
-              <p>Thanks for choosing us, and happy shopping!</p>
+
+              <br />
+              <br />
+
+              <p className="card-texta lead fw-bold text-center">
+                Join the revolution and elevate your shopping game with us.
+                Treat yourself to a seamless, hassle-free experience and
+                discover why we're the go-to destination for discerning shoppers
+                everywhere. Shop now and see the difference for yourself.
+              </p>
+
+              <div>
+                <h6 className="section__subtitle text-center">
+                  Need Any Help? Contact us
+                </h6>
+                <h4 className="text-center">+245 792278510</h4>
+              </div>
+              <section>
+                <Container>
+                  <Row>
+                    <Col lg="12" className="mb-5 text-center">
+                      <h2 className="section__title">Our Members</h2>
+                    </Col>
+
+                  </Row>
+                </Container>
+              </section>
             </div>
           </Col>
         </Row>
       </Container>
+
+      <br />
+      <div>
+        <Footer />
+      </div>
     </>
   );
 };

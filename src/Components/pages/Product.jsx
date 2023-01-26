@@ -38,9 +38,8 @@ const Product = () => {
             height="420px"
             width="350px"
           />
-          <h3 className="dislpay-6 fw-bold my-4 ">$ {product.price}</h3>
         </div>
-        <div className="col-md-4 py-5">
+        <div className="row-md-4 py-5">
           <h4 className="text-uppercase text-black-50">{product.category}</h4>
           <h1 className="display-5">{product.title}</h1>
           <p className="lead1 fw-bolder ">
@@ -48,6 +47,7 @@ const Product = () => {
             <i className=" fa fa-star"></i>
           </p>
           <p className="lead1 fw-bolder ">{product.description}</p>
+          <h3 className="dislpay-6 fw-bold my-4 ">$ {product.price}</h3>
 
           <button
             className="btn btn-outline-dark ms-1"

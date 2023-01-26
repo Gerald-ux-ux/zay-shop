@@ -1,10 +1,20 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
+/* eslint-disable no-restricted-globals */
 import { addCart, delCart } from "../redux/action";
 
 
 const Cart = () => {
+
+  let navigate = useNavigate();
+
+  const handleClick = () => {
+    alert("Successful purchase! Redirecting you to the home page.");
+    navigate("/")
+      location.reload();
+  };
+
   const calculateTotal = () => {
     let total = 0;
     state.forEach((item) => {
@@ -77,8 +87,12 @@ const Cart = () => {
           <p className="lead fw-bold">Total: ${calculateTotal()}</p>
         </div>
         <div className="container">
-          <div className="col-md-4">
-            <button className="btn btn-outline-dark mb-2 w-25 mx-auto">
+          <div className=" text-center ">
+            <button
+              className="btn btn-outline-dark mb-2 w-25 mx-auto"
+              onClick={handleClick}
+              
+            >
               Pay
             </button>
           </div>
