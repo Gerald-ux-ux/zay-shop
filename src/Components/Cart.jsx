@@ -10,7 +10,7 @@ const Cart = () => {
   let navigate = useNavigate();
 
   const handleClick = () => {
-    alert("Successful purchase! Redirecting you to the home page.");
+    alert("Successful purchase! Continue shoping with us.");
     navigate("/")
       location.reload();
   };
