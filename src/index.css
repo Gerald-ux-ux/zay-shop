@@ -107,23 +107,22 @@ h6 {
 /* ======= Footer style ====== */
 
 .footer {
-  background: #1e1f26;
+  background: #f98bae;
   padding-top: 50px;
   padding-bottom: 15px;
 }
 
 .footer__logo i {
-  color: #d0e1f9;
+  color: #1e1f26;
   font-weight: 350;
 }
 
-.footer__logo span {
-  color: #d0e1f9;
-  font-weight: 500;
-}
+
+
+
 
 .footer__logo-content {
-  color: #d0e1f9;
+  color: #1e1f26;
   margin-top: 15px;
   line-height: 30px;
 }
@@ -134,22 +133,22 @@ h6 {
 }
 
 .quick__link a {
-  color: #d0e1f9;
+  color: #1e1f26;
   text-decoration: none;
   font-weight: 300;
   transition: 0.3s;
 }
 
 .quick__link a:hover {
-  color: palevioletred;
+  color:#fffcff;
 }
 
 .footer__link-title {
-  color: #d0e1f9;
+  color: #1e1f26;
 }
 
 .office__info {
-  color: #d0e1f9;
+  color: #1e1f26;
   font-weight: 300;
 }
 
@@ -165,7 +164,7 @@ h6 {
 
 .newsletter input {
   background: transparent;
-  color: #fff;
+  color: #1e1f26;
   border: none;
   outline: none;
 }
@@ -175,12 +174,12 @@ h6 {
 }
 
 .footer__bottom {
-  border-top: 1px solid #d0e1f9;
+  border-top: 1px solid #1e1f26;
   margin-top: 20px;
 }
 
 .section__description1 {
-  color: #d0e1f9;
+  color: #1e1f26;
 }
 .text-container {
   margin-top: 20px;

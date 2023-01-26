@@ -1,27 +1,27 @@
-import React from 'react'
+import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
 
 const Footer = () => {
-    const quickLinks = [
-      {
-        path: "/about",
-        display: "About",
-      },
-      {
-        path: "/cars",
-        display: "Car Listing",
-      },
-      {
-        path: "/blogs",
-        display: "Blog",
-      },
+  const quickLinks = [
+    {
+      path: "/about",
+      display: "About",
+    },
+    {
+      path: "/cars",
+      display: "Car Listing",
+    },
+    {
+      path: "/blogs",
+      display: "Blog",
+    },
 
-      {
-        path: "/contact",
-        display: "Contact",
-      },
-    ];
+    {
+      path: "/contact",
+      display: "Contact",
+    },
+  ];
   const date = new Date();
   const year = date.getFullYear();
   return (
@@ -29,20 +29,17 @@ const Footer = () => {
       <Container>
         <Row>
           <Col class="col-sm-6">
-            <div className="logo footer__logo">
-              <h1>
-                <Link to="/home" className=" d-flex align-items-center gap- 2">
-                  <i class="ri-car-line"></i>
-                  <span>Rent Car Service</span>
-                </Link>
-              </h1>
-            </div>
+            <Link className="footer__logo fw-bold fs-4" to="/home">
+              <i class="fa fa-shopping-bag" aria-hidden="true">
+                Zay Shop
+              </i>
+            </Link>
+
             <p className="footer__logo-content">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
-              Consequuntur, distinctio, itaque reiciendis ab cupiditate
+              Make Money with Us
               <br />
-              harum ex quam veniam, omnis expedita animi quibusdam <br />
-              obcaecati mollitia? Delectus et ad illo recusandae temporibus?
+              Buy products from us on a low bugdet <br />
+              <h4 className="fw-bold bg">You order, We deliver !</h4>
             </p>
           </Col>
 
@@ -61,11 +58,11 @@ const Footer = () => {
 
           <Col lg="3" md="4" sm="6">
             <div className="mb-2">
-              <h5 className="footer__link-title mb-2">Head Office</h5>
-              <p className="office__info">1738 Kenya, Thika Rd, Nairobi</p>
-              <p className="office__info">Phone: +254 720673399</p>
-              <p className="office__info">Email: maridadyrentals@gmail.com</p>
-              <p className="office__info">Office Time: 9am - 5pm</p>
+              <h5 className="footer__link-title mb-2">Main Shop</h5>
+              <p className="office__info">1112 Kenya, Mombasa Rd, Nairobi</p>
+              <p className="office__info">Phone: +254 725573399</p>
+              <p className="office__info">Email: zayshop@gmail.com</p>
+              <p className="office__info">On Site Shop Time: 9am - 9pm</p>
             </div>
           </Col>
 
