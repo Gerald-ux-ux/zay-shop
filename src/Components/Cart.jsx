@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { addCart, delCart } from "../redux/action";
 
 const Cart = () => {
+  const calculateTotal = () => {
+    let total = 0;
+    state.forEach((item) => {
+      total += item.qty * item.price;
+    });
+    return total;
+  };
+
   const state = useSelector((state) => state.handleCart);
   const dispatch = useDispatch();
 
@@ -16,10 +24,10 @@ const Cart = () => {
 
   const emptyCart = () => {
     return (
-      <div className="px-4 my-5 bg-light rounded-3 py-5">
+      <div className="px-4 my-5   rounded-1 py-5">
         <div className="container py-4">
           <div className="row">
-            <h3>Your Cart is Empty</h3>
+            <h3 className="snt">Your Cart is Empty</h3>
           </div>
         </div>
       </div>
@@ -28,10 +36,10 @@ const Cart = () => {
   const cartItems = (product) => {
     return (
       <>
-        <div className="px-4 my-5 bg-light rounded-3 py-5">
+        <div className="px-4 my-5 py-4">
           <div className="container py-4">
             <div className="row justify-content-center">
-              <div className="col-md-4">
+              <div className="col-md-2">
                 <img
                   src={product.image}
                   alt={product.title}
@@ -40,13 +48,10 @@ const Cart = () => {
                 />
               </div>
               <div className="col-md-4">
-                <h3>{product.title}</h3>
-                <p className="lead fw-bold">
-                  {product.qty} X ${product.price} = $
-                  {product.qty * product.price}
-                </p>
+                <h3 className="snt">{product.title}</h3>
+                <p className="lead fw-bold">{product.qty * product.price}</p>
                 <button
-                  className="btn btn-outline-dark me-4"
+                  className="btn btn-outline-dark me-2"
                   onClick={() => handleDel(product)}
                 >
                   <i className="fa fa-minus"></i>
@@ -67,14 +72,16 @@ const Cart = () => {
   const buttons = () => {
     return (
       <>
+        <div className="d-flex justify-content-center mb-2 pb-2">
+          <p className="lead fw-bold">Total: ${calculateTotal()}</p>
+        </div>
         <div className="container">
           <div className="row">
-            <Link
-              to="/checkout"
-              className="btn btn-outline-dark mb-5 w-25 mx-auto"
+            <button
+              className="btn btn-outline-dark mb-2 w-25 mx-auto"
             >
-              Proceed to Checkout
-            </Link >
+              Pay
+            </button>
           </div>
         </div>
       </>

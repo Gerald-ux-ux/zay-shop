@@ -8,6 +8,7 @@ import Products from "./Components/pages/Products";
 import Navbar from "./Components/Navbar";
 import Product from "./Components/pages/Product";
 import Cart from "./Components/Cart";
+import Checkout from "./Components/Checkout";
 
 
 function App() {
@@ -23,7 +24,8 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/product/:id" element={<Product />} />
           <Route path="*" element={<NotFound />} />
-          <Route  path="/cart" element={Cart } />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout/:id" element={<Checkout /> } />
         </Routes>
       </div>
     </>

@@ -3,17 +3,16 @@ import { useState, useEffect } from "react";
 import { useDispacth, useDispatch } from "react-redux";
 import { addCart } from "../../redux/action";
 import { useParams } from "react-router-dom";
-import { Link  } from "react-router-dom";
+import { Link } from "react-router-dom";
 const Product = () => {
   const { id } = useParams();
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(false);
 
-
   const dispatch = useDispatch();
   const addProduct = (product) => {
     dispatch(addCart(product));
-  }
+  };
 
   useEffect(() => {
     const getProducts = async () => {
@@ -26,11 +25,7 @@ const Product = () => {
   }, []);
 
   const Loading = () => {
-    return (
-      <>
-Loading ....
-      </>
-    );
+    return <>Loading ....</>;
   };
 
   const ShowProduct = () => {
@@ -53,9 +48,15 @@ Loading ....
           </p>
           <h3 className="dislpay-6 fw-bold my-4 ">$ {product.price}</h3>
           <p className="lead1 fw-bolder ">{product.description}</p>
-          <button className="btn btn-outline-dark ms-1" onClick={() => addProduct(product)}
-          >Add to cart</button>
-          <Link  to="/cart"className="btn btn-outline-dark ms-1 px-3">Go to cart</Link>
+          <button
+            className="btn btn-outline-dark ms-1"
+            onClick={() => addProduct(product)}
+          >
+            Add to cart
+          </button>
+          <Link to="/cart" className="btn btn-outline-dark ms-1 px-3">
+            Go to cart
+          </Link>
         </div>
       </div>
     );

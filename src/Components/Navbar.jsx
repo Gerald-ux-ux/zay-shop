@@ -24,7 +24,7 @@ const Navbar = () => {
   }, []);
 
   function handleSelect(product) {
-    window.location.href = `/product/${product.name}`;
+    window.location.href = `/products/${product.name}`;
   }
 const [searchTerm, setSearchTerm] = useState('');
 const handleSearch = (event) => {
