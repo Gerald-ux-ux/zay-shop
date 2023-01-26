@@ -117,6 +117,7 @@ h6 {
   font-weight: 350;
 }
 
+
 .footer__logo-content {
   color: #1e1f26;
   margin-top: 15px;
@@ -136,7 +137,7 @@ h6 {
 }
 
 .quick__link a:hover {
-  color:#fffcff;
+  color:white;
 }
 
 .footer__link-title {

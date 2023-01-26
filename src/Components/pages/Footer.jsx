@@ -48,7 +48,7 @@ const Footer = () => {
       <Container>
         <Row>
           <Col class="col-sm-6">
-            <Link className="footer__logo fw-bold fs-4" to="/home">
+            <Link className="navbar-brand fw-bolder fs-4" to="/home">
               <i class="fa fa-shopping-bag" aria-hidden="true">
                 Zay Shop
               </i>
@@ -101,8 +101,8 @@ const Footer = () => {
           <Col lg="12">
             <div className="footer__bottom">
               <p className="section__description1 d-flex align-items-center justify-content-center gap-1 pt-4">
-                <i class="ri-copyright-line"></i>Copyright 1990 - {year}, Developed by
-                Gerald Kamau. All rights reserved.
+                <i class="ri-copyright-line"></i>Copyright 1990 - {year},
+                Developed by Gerald Kamau. All rights reserved.
               </p>
             </div>
           </Col>
