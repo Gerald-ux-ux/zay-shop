@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { addCart, delCart } from "../redux/action";
 
+
 const Cart = () => {
   const calculateTotal = () => {
     let total = 0;
@@ -93,6 +94,7 @@ const Cart = () => {
       {state.length === 0 && emptyCart()}
       {state.length !== 0 && state.map(cartItems)}
       {state.length !== 0 && buttons()}
+
     </div>
   );
 };

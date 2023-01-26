@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
+import Footer from "./pages/Footer";
 
 const Checkout = () => {
   const { id } = useParams();
@@ -52,6 +53,7 @@ const Checkout = () => {
           </button>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

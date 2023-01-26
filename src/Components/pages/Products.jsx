@@ -5,6 +5,7 @@ import Skeleton from "react-loading-skeleton";
 // import { useActionData } from "react-router-dom";
 import { Link } from "react-router-dom";
 
+
 const Products = () => {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(data);
@@ -135,6 +136,7 @@ const Products = () => {
           </div>
         </div>
       </div>
+
     </div>
   );
 };

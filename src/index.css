@@ -117,10 +117,6 @@ h6 {
   font-weight: 350;
 }
 
-
-
-
-
 .footer__logo-content {
   color: #1e1f26;
   margin-top: 15px;
@@ -185,22 +181,6 @@ h6 {
   margin-top: 20px;
 }
 
-/* latest code update */
-
-/* .bottom1 {
-  position: absolute;
-  right: 180px;
-}
-.bottom {
-  position: absolute;
-  right: 45%;
-}
-.up{
- position: relative;
- right: 10px;
-} */
-
-/* latest code update */
 
 @media only screen and (max-width: 768px) {
   .footer__logo-content {

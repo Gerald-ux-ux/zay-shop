@@ -9,12 +9,12 @@ const Footer = () => {
       display: "About",
     },
     {
-      path: "/cars",
-      display: "Car Listing",
+      path: "/home",
+      display: "Home",
     },
     {
-      path: "/blogs",
-      display: "Blog",
+      path: "/products",
+      display: "Products",
     },
 
     {
@@ -44,11 +44,11 @@ const Footer = () => {
           </Col>
 
           <Col lg="2" md="4" sm="6">
-            <div className="mb-2">
+            <div className="mb-2 ">
               <h5 className="footer__link-title">Quick Links</h5>
               <ListGroup>
                 {quickLinks.map((item, index) => (
-                  <ListGroupItem key={index} className="p-0 mt-3 quick__link">
+                  <ListGroupItem key={index} className="p-0 mt-2 quick__link">
                     <Link to={item.path}>{item.display}</Link>
                   </ListGroupItem>
                 ))}

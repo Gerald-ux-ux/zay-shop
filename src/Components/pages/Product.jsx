@@ -67,6 +67,7 @@ const Product = () => {
       <div className="container">
         <div className="row">{loading ? <Loading /> : <ShowProduct />}</div>
       </div>
+      
     </div>
   );
 };
