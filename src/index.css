@@ -55,6 +55,21 @@ h6 {
   background-color: #f98bae !important;
 }
 
+@media (max-width: 576px) {
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .buttons .btn {
+    margin: 5px;
+    width: 50%;
+  }
+
+}
+
+
+
 .hr-1 {
   color: #f98bae;
   font-weight: bolder !important;
@@ -238,4 +253,19 @@ h6 {
 
 .text-center{
   color: #1e1f26;
+}
+
+
+@media only screen and (max-width: 768px) {
+  section {
+    padding: 30px 0px;
+  }
+
+  .section__title {
+    font-size: 1.6rem;
+  }
+
+  .section__subtitle {
+    font-size: 1.1rem;
+  }
 }

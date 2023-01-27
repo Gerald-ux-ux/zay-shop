@@ -25,22 +25,46 @@ nav.navbar {
   background-color: #fffcff !important;
   color: #1e1f26 !important;
   width: 100px;
-
-
 }
 
 .btn-light:hover {
   color: #f98bae !important;
 }
 
-
-@media (max-width:768px){
-  .navbar-nav li{
-    font-size:0.9rem;
-    padding:0.5rem;
+@media only screen and (max-width: 768px) {
+  .header__top,
+  .header__middle,
+  .nav__right {
+    display: none;
   }
-}
 
-.navbar-toggler{
-  color: #1e1f26 !important;
+  .mobile__menu {
+    display: block;
+  }
+
+  .navbar{
+    z-index: 9999;
+    display: none;
+  }
+
+  .navbar-brand {
+    width: 250px;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 2rem;
+    justify-content: center;
+  }
+
+  .menu a {
+    color: #000d6b;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  .navbar-toggler {
+    color: #f98bae !important;
+  }
 }

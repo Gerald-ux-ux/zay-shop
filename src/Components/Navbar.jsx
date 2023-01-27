@@ -1,45 +1,54 @@
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import "../styles/Navbar.css";
-import Product from "./pages/Product";
 
 const Navbar = () => {
   const menuRef = useRef(null);
-const toggleMenu = () => {
-  menuRef.current.classList.toggle("collapse");
-  menuRef.current.classList.toggle("navbar-collapse");
-};
+  const toggleMenu = () => {
+    menuRef.current.classList.toggle("collapse");
+    menuRef.current.classList.toggle("navbar-collapse");
+  };
 
   const state = useSelector((state) => state.handleCart);
-  const [filteredProduct, setFilteredProduct] = useState([]);
-  const [product, setProduct] = useState([]);
+  // const [filteredProduct, setFilteredProduct] = useState([]);
 
-  useEffect(() => {
-    async function fetchProducts() {
-      try {
-        const response = await fetch("https://fakestoreapi.com/products");
-        const data = await response.json();
-        setProduct(data);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    fetchProducts();
-  }, []);
+  // const [searchTerm, setSearchTerm] = useState("");
+  // const [product, setProduct] = useState([]);
+  
+// useEffect(() => {
+//   async function fetchProducts() {
+//     try {
+//       const response = await fetch("https://fakestoreapi.com/products");
+//       const data = await response.json();
+//       setProduct(data);
+//       setFilteredProduct(data);
+//     } catch (error) {
+//       console.log(error);
+//     }
+//   }
+//   fetchProducts();
+// }, []);
 
-  function handleSelect(product) {
-    window.location.href = `/products/${product.name}`;
-  }
-  const [searchTerm, setSearchTerm] = useState("");
-  const handleSearch = (event) => {
-    setSearchTerm(event.target.value);
-    const filtered = product.filter((product) =>
-      product.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    setFilteredProduct(filtered);
-  };
+  // const handleSelect = (product) => {
+  //   if (product) {
+  //     window.location.href = `/product/${product.id}`;
+  //   }
+  // };
+
+  // const handleSearch = (event) => {
+    
+  //   setSearchTerm(event.target.value);
+  //   const filtered =
+  //     product &&
+  //     product.filter(
+  //       (product) =>
+  //         product.name &&
+  //         product.name.toLowerCase().includes(searchTerm.toLowerCase())
+  //     );
+  //   setFilteredProduct(filtered);
+  // };
 
   return (
     <div>
@@ -60,10 +69,13 @@ const toggleMenu = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarNav" ref={menuRef} >
+          <div
+            className="collapse navbar-collapse"
+            id="navbarNav"
+            ref={menuRef}
+          >
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0`">
               <li className="nav-item ">
                 <Link className="nav-link ms-2 " to="/home">
@@ -87,22 +99,21 @@ const toggleMenu = () => {
               </li>
             </ul>
             <form className="d-flex ">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search for items..."
-                aria-label="Search"
-                onChange={handleSearch}
-              />
-
-              {filteredProduct.slice(0, 3).map((product) => (
-                <li key={product.id} onClick={() => handleSelect(product)}>
-                  {product.Name}
-                </li>
-              ))}
-              <button class="btn btn-light " type="submit">
-                Search
-              </button>
+              {/* <div className="nav__right">
+                <div className="search__box">
+                  <input
+                    onChange={handleSearch}
+                    className="input-a"
+                    type="text"
+                    placeholder="Find a product"
+                  />
+                  {filteredProduct.map((product) => (
+                    <li key={product.id} onClick={() => handleSelect(product)}>
+                      {product.title}
+                    </li>
+                  ))}
+                </div>
+              </div> */}
 
               <div classNameName="buttons">
                 <Link to="/cart" class="btn btn-light ms-2">
