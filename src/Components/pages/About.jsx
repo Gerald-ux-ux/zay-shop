@@ -4,24 +4,7 @@ import Footer from "./Footer";
 
 
 const AboutUs = () => {
-    const socialIcons = [
-    {
-      path: "#",
-      display: <i class="fa fa-instagram" aria-hidden="true">  instagram</i>,
-    },
-    {
-      path: "#",
-      display: <i class="fa fa-facebook" aria-hidden="true"> facebook</i>,
-    },
-    {
-      path: "#",
-      display: <i class="fa fa-linkedin" aria-hidden="true"> linkedin</i>,
-    },
-    {
-      path: "#",
-      display: <i class="fa fa-twitter" aria-hidden="true"> twitter</i>,
-    },
-  ];
+
   
   return (
     <>
