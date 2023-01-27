@@ -32,3 +32,15 @@ nav.navbar {
 .btn-light:hover {
   color: #f98bae !important;
 }
+
+
+@media (max-width:768px){
+  .navbar-nav li{
+    font-size:0.9rem;
+    padding:0.5rem;
+  }
+}
+
+.navbar-toggler{
+  color: #1e1f26 !important;
+}
